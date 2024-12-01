@@ -1,0 +1,31 @@
+def simple_calculator():
+    print("Welcome to the simple calculator.")
+    print("Here,you can add,subtract,multiply or divide two numbers. ")
+
+    try:
+        number1=float(input("Enter the first number."))
+        number2=float(input("Enter the second number."))
+
+        operator=input("Enter +,-,*,/")
+
+        if operator=="+":
+            result=number1+number2
+        elif operator=="-":
+            result=number1-number2
+        elif operator=="*":
+            result=number1*number2
+        elif operator=="/":
+            result=number1/number2
+        else:
+            raise ValueError("Incorrect operation.Please use +,-,*,/ for operators.")
+    except ZeroDivisionError:
+        print("You cannot divide by zero.Please choose another number")
+    except ValueError:
+        print("You might have entered a symbol or an alphabet somewhere.Please try again.")
+    except Exception:
+        print("Some error has occurred.Please try again.")
+    print(result)
+
+    print("Well,thank you for using this simple calculator.")
+    print("Have a great day!")
+simple_calculator()
