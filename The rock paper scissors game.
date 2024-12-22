@@ -1,0 +1,27 @@
+import random
+print("Welcome to the rock paper scissors game.")
+print("You will play against the computer.")
+print("Type 'rock','paper' or 'scissors' to make your choice. ")
+players_choice=input('Enter your choice. : ').lower()
+choices=["rock","paper","scissor"or"scissors"]
+computers_choice=random.choice(choices)
+print(f"The computer chose {computers_choice}.")
+if players_choice==computers_choice:
+    print("It is a tie.")
+elif players_choice=="rock":
+    if computers_choice=="scissors":
+        print("You won ! Rock smashes scissors")
+    else:
+        print("You lose.Paper covers rock.")
+elif players_choice=="scissors"or"scissor":
+    if computers_choice=="paper":
+        print("You won ! Scissors cuts paper.")
+    else:
+        print("You lose.Paper covers rock.")
+elif players_choice=="paper":
+    if computers_choice=="rock":
+        print("You won ! Paper covers rock.")
+    else:
+        print("You lose.Scissors cut paper.")
+else:
+    print("Oops.That is NOT a valid choice.Only choose rock,paper,scissors.")
