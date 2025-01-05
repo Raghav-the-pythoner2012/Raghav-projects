@@ -1,0 +1,39 @@
+class Student :
+    def __init__(self,name):
+        self.name=name
+        self.subjects={}
+    def add_subject(self,subject,marks):
+        self.subjects[subject]=float(marks)
+    def calculate_total(self):
+        return sum(self.subjects.values())
+    def calculate_average(self):
+        if len(self.subjects)==0:
+            return 0
+        return self.calculate_total()/len(self.subjects)
+    def show_report(self):
+        print(f"Report card for {self.name}")
+        print("-"*20)
+        print(f"Total marks: {self.calculate_total()}")
+        print("-"*20)
+        print(f"Average marks: {self.calculate_average()}")
+print("Welcome to the Student report card generator.")
+student_name=input("Enter the student's name: ")
+student=Student(student_name)
+
+while True:
+    print("\n What would you like to do?")
+    print("1. Add a subject and marks")
+    print("2. Show report card")
+    print("3. Exit")
+    choice = input("Enter your choice (1-3): ")
+    if choice == "1":
+            subject = input("Enter the subject name: ")
+            marks = input(f"Enter the marks for {subject}: ")
+            student.add_subject(subject, marks)
+    elif choice == "2":
+            student.show_report()
+    elif choice == "3":
+            print("Good bye.")
+            break
+    else:
+            print("Invalid choice.Try again.")
