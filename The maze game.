@@ -1,0 +1,22 @@
+def maze_game():
+    print("Welcome to the maze game.")
+    print("Here options are given on where you want to go.If all options are correct,you have won the game. ")
+    print("\nYou see two paths: Left and Right.")
+    choice1=input("Which way do you want to go? : ").lower()
+    if choice1=="left":
+        print("\nYou walk into a dark tunnel.You see a ladder going up.")
+        choice2=input("Do you want to continue walking or do you want to climb the ladder?(ladder/continue) : ").lower()
+        if choice2=="ladder":
+            print("\nYou have found a trapdoor and it leads you out.You have escaped.")
+        else:
+            print("\nYou keep walking and fall into a pit.Game over.")
+    elif choice1=="right":
+        print("\nYou find a huge door with a tiny keypad.Beside it was written 123.It was also written that it was a 3 digit number.")
+        code=input("It asks you to enter the password.What will you enter? : ")
+        if code=="123":
+            print("\nThe huge door opened leading outside.You have escaped.")
+        else:
+            print("\nyou didn't know the password and got lost.Game over.")
+    else:
+        print('\nYou get lost in the maze and go missing.Game over.')
+maze_game()
